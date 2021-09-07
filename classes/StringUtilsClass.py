@@ -6,6 +6,14 @@ class StringUtils:
         self.mainString = mainString
         self.nCharacters = 4
 
+    # This function create an array of subtrings with nCharacters
+    # Description: In each iteration of the loop a temporal variable
+    #              store one character of the main string and when it
+    #              check the condition of nCharacters delete the ferst item
+    #              in the temporal variable, add a new one and store it in
+    #              an array.
+    # self: The self parameter is a reference to the current instance of the class.
+    # Returns an array of strings
     def makeArray(self):
         temp_str = ""
         dataArr = []
@@ -20,7 +28,11 @@ class StringUtils:
                     temp_str = temp_str[1:]
             
         return dataArr
-    
+ 
+    # This function evaluate throught an array of substrings how many times exist each item 
+    # and if there are repetead values.
+    # self: The self parameter is a reference to the current instance of the class.
+    # Returns an array of dicts   
     def stringInfo(self):
         data = self.makeArray()
         output = []
@@ -46,6 +58,9 @@ class StringUtils:
 
         return output
     
+    # This create a message to the user showing the response.
+    # self: The self parameter is a reference to the current instance of the class.
+    # Returns a string message
     def msgOutput(self):
         dictOut = self.stringInfo()
         msg = ""
